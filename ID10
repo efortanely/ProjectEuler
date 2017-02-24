@@ -1,0 +1,17 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class ID10 {
+	public static void main(String[] args) {
+		ArrayList<BigInteger> primes = new ArrayList<BigInteger>(Arrays.asList(BigInteger.valueOf(2)));
+		BigInteger sum = BigInteger.valueOf(2);
+		for(BigInteger num = BigInteger.valueOf(3); num.compareTo(BigInteger.valueOf(2000000)) < 0; num = num.add(BigInteger.ONE)){
+			boolean isPrime = true;
+			for(BigInteger prime : primes) if(num.mod(prime).equals(BigInteger.ZERO)) isPrime = false;
+			if(isPrime){
+				primes.add(num);
+				sum = sum.add(num);
+			}
+		}System.out.println("Sum: " + sum);
+	}
+}
