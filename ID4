@@ -1,0 +1,14 @@
+public class ID4 {
+	public static void main(String[] s){
+		int maxPal = 0;
+		for(int i = 900; i < 1000; i++){
+			for(int j = 900; j < 1000; j++){
+				boolean isPal = true;
+				for(int k = 0; k < Integer.toString(i*j).length(); k++){
+					if(!(Integer.toString(i*j).charAt(k) == Integer.toString(i*j).charAt(Integer.toString(i*j).length()-(k+1)))) isPal = false;
+				}
+				if(isPal) if(i*j > maxPal) maxPal = i*j;
+			}
+		}System.out.println(maxPal);
+	}
+}
