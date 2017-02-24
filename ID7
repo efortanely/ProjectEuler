@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+public class ID7 {
+	public static void main(String[] s){
+		ArrayList<Integer> primes = new ArrayList<Integer>();
+		primes.add(2);
+		int num = 3;
+		while(primes.size() < 10001){
+			boolean isPrime = true;
+			for(Integer prime : primes) if(num%prime==0) isPrime = false;
+			if(isPrime) primes.add(num);
+			num += 1;
+		}
+		System.out.println(num - 1);
+	}
+}
