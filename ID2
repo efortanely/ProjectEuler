@@ -1,0 +1,12 @@
+public class ID2 {
+	public static void main(String[] s){
+		int prev = 1, curr = 1, sum = 0;
+		while(curr+prev < 4000000){
+			int temp = curr+prev;
+			prev = curr;
+			curr = temp;
+			if(curr%2==0) sum+=curr;
+		}
+		System.out.println(sum);
+	}
+}
