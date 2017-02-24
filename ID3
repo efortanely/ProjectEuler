@@ -1,0 +1,19 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collections;
+public class ID3 {
+	public static void main(String[] s){
+		BigInteger input = new BigInteger("600851475143");
+		BigInteger run = input;
+		BigInteger bi = BigInteger.valueOf(2);
+		ArrayList<BigInteger> div = new ArrayList<BigInteger>();
+		while(!run.equals(BigInteger.ONE)){
+			if(run.mod(bi).equals(BigInteger.ZERO)){
+				div.add(bi);
+				run = run.divide(bi);
+				System.out.println(div);
+			}
+			bi = bi.add(BigInteger.ONE);
+	    }System.out.println(Collections.max(div));
+	}
+}
