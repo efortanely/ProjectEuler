@@ -1,0 +1,7 @@
+public class ID6 {
+	public static void main(String[] s){
+		int n = 100, sum = 0;
+		for(int i = 1; i <= n; i++) sum+=i;
+		System.out.printf("%.0f", Math.pow(sum, 2) - ((n*(n+1)*(2*n+1))/6));
+	}
+}
